@@ -158,7 +158,6 @@
 /* Mobile Version / All Version End */
 
 /* Desktop Version Start -> Large devices (desktops, 992px and up) */
-
 @media (min-width: 992px) {
   /* Navbar Start */
   .navbar-brand,
