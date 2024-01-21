@@ -1,30 +1,51 @@
-/* Mobile Version / All Version Start */
-/* Navbar Start */
+/* General Styles */
+
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+
 .navbar {
   position: relative;
   z-index: 1;
 }
 
 .navbar-brand {
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 32px;
 }
 
-/* Utility Start */
-.tombol {
-  text-transform: uppercase;
-  border-radius: 40px;
+.navbar-brand,
+.nav-link {
+  color: white !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
-/* Utility End */
-/* Navbar End */
 
-/* Jumbo Tron / Hero Start */
+.nav-link {
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+
+.nav-link:hover::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #0b63dc;
+  width: 50%;
+  margin: auto;
+  padding-bottom: 5px;
+  margin-bottom: -8px;
+}
+
+/* Jumbotron Styles */
+
 .jumbotron {
   background-image: url(../img/assets/jumbotron-bg.jpg);
   background-size: cover;
   height: 540px;
   text-align: center;
   position: relative;
+  margin-top: -75px;
 }
 
 .jumbotron .container {
@@ -54,9 +75,9 @@
   position: absolute;
   bottom: 0px;
 }
-/* Jumbo Tron / Hero End */
 
-/* Info Panel */
+/* Info Panel Styles */
+
 .info-panel {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
@@ -83,14 +104,19 @@
   font-size: 14px;
   color: #acacac;
   margin-top: -5px;
-  font-weight: 200px;
 }
 
-/* Working Space Start */
+/* Working Space Styles */
 
 .workingspace {
   margin-top: 120px;
   text-align: center;
+  overflow: hidden;
+}
+
+.workingspace img {
+  max-width: 100%;
+  height: auto;
 }
 
 .workingspace h3 {
@@ -111,9 +137,12 @@
   margin: 30px 0;
 }
 
-/* Working Space End */
+.workingspace .btn {
+  display: block;
+  margin: auto;
+}
 
-/* Testimonial */
+/* Testimonial Styles */
 
 .testimonial {
   margin-top: 120px;
@@ -155,60 +184,7 @@
   text-align: center;
 }
 
-/* Mobile Version / All Version End */
-
-/* Desktop Version Start -> Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  /* Navbar Start */
-  .navbar-brand,
-  .nav-link {
-    color: white !important;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
-  }
-
-  .nav-link {
-    text-transform: uppercase;
-    margin-right: 30px;
-  }
-
-  .nav-link:hover::after {
-    content: "";
-    display: block;
-    border-bottom: 3px solid #0b63dc;
-    width: 50%;
-    margin: auto;
-    padding-bottom: 5px;
-    margin-bottom: -8px;
-  }
-
-  /* Navbar End */
-
-  /* Jumbotron / Hero Start  */
-  .jumbotron {
-    margin-top: -75px;
-    height: 640px;
-  }
-
-  .jumbotron .display-4 {
-    font-size: 70px;
-  }
-  /* Jumbotron / Hero End  */
-}
-
-/* Working Space Start */
-.workingspace {
-  text-align: left;
-}
-/* Working Space End */
-
-/* Testimonial Start */
-.testimonial h5 {
-  font-size: 32px;
-}
-
-/* Testimonial End */
-
-/* Footer Start*/
+/* Footer Styles */
 
 .footer {
   margin-top: 100px;
@@ -218,5 +194,11 @@
   color: #acacac;
   font-size: 18px;
 }
-/* Footer End */
-/* Dekstop Version End */
+
+/* Responsive Styles */
+
+@media (max-width: 767px) {
+  .workingspace .col-lg-6 {
+    display: none;
+  }
+}
