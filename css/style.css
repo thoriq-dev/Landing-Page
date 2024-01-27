@@ -117,6 +117,8 @@ body {
 .workingspace img {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .workingspace h3 {
@@ -197,8 +199,47 @@ body {
 
 /* Responsive Styles */
 
-@media (max-width: 767px) {
-  .workingspace .col-lg-6 {
-    display: none;
+@media (min-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .workingspace {
+    text-align: left;
+  }
+
+  .workingspace .btn {
+    width: 50%;
   }
 }
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .workingspace .btn {
+    width: 50%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .workingspace .btn {
+    width: 50%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .workingspace .btn {
+    width: 50%;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .workingspace .btn {
+    width: 50%;
+  }
+}
+
+/* Extra large devices (large desktops) */
+/* No media query since the extra-large breakpoint has no upper bound on its width */
